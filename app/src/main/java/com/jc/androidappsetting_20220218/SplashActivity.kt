@@ -14,6 +14,7 @@ class SplashActivity : AppCompatActivity() {
 //        화면 이동 ~ 로딩화면 종료를, 2.5초 후에 실행시키고 싶다.
 //        UI 동작을 담당하는 Thread 에게, 2.5초 후에 이동하는 코드를 실행시켜 달라고 등록.
 //        등록 해주는 클래스 - Handler
+//        Looper.getMainLooper() -> UI Thread 를 호출
         val myHandler = Handler(Looper.getMainLooper()) // Main Thread 와 통신하는 Handler 생성
         myHandler.postDelayed({
             val myIntent = Intent(this, MainActivity::class.java)
